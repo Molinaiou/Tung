@@ -1,0 +1,118 @@
+		* {
+			margin: 0;
+			padding: 0;
+			cursor: url('taco.png'), auto;
+		}
+		p {
+			color: red;
+			font-family: sans-serif;
+			font-size: 25px;
+		}
+		.texto {
+			width: 80%;
+			margin: auto;
+			text-align: center;
+			padding: 3px;
+
+		}
+
+		.menu {
+			top: 0;
+			left: 0;
+			display: inline-flex;
+			justify-content: center;
+			gap: 4rem;
+			height: 50px;
+			width: 100%;
+			padding: 2%;
+			text-align: center;
+			background-color: black;
+			color: white;
+			letter-spacing: 2px;
+			word-spacing: 15px;
+			position: fixed;
+			z-index: 100;
+		}
+
+		.borda {
+			background-color: white;
+			opacity: 0.5;
+			border: 5px solid black;
+			font-size: 25px;
+			width: 50%;
+			padding: 1px 2px;
+			margin: 115px auto;
+			border-radius: 30px;
+			border-color: red;
+			box-shadow: 5px 5px 0px grey,
+						8px 8px 8px darkgrey;
+			border-style: dotted;
+			transition: 0.3s;
+		}
+		.borda:hover{
+			width:60%;
+			font-size: 30px;
+			font-style: revert-layer;
+			color: red;
+			opacity: 1;
+		}
+		.amenu{
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				height: 2.5rem;
+				min-width: 6rem;
+				padding: 0.5rem;
+				background: linear-gradient(67deg, red, black);
+				border-radius: 1rem;
+				color: white;
+				text-decoration: revert-layer;
+				border-bottom: 4px solid rgba(0, 0, 0, 0.1);
+		}
+
+		
+		.amenu:hover{
+			color: lightblue;
+			transform: translateY(-10px);
+			transition-duration: 0.3s; 
+		}
+		
+		.atual{
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			height: 2.5rem;
+			min-width: 6rem;
+			padding: 0.5rem;
+			background: linear-gradient(67deg, #FF5C00, black);
+			border-radius: 1rem;
+			color: white;
+			text-decoration: revert-layer;
+			border-bottom: 4px solid rgba(0, 0, 0, 0.1);
+		}
+		
+		.atual:hover{
+			color: #FFC067;
+			transform: translateY(-10px);
+			transition-duration: 0.3s; 
+		}
+		
+		h1{
+			font-size: 200%;
+			color: white;
+			font-family: fantasy;
+			padding-top: 120px;
+			padding-bottom: 20px;
+			transition: 0.4s;
+			color: darkred;
+		}
+		h1:hover {
+			font-size: 400%;
+			text-shadow: 30px 30px 0px darkgray;
+			padding-top:120px;
+			padding-bottom: 80px;
+
+		}
+  		.primeiro{
+  			margin-top: 130px;
+  		}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="taco.png">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Tung | Entrar</title>
+	<style type="text/css">
+			body {
+				height: 100vh;
+				background: linear-gradient(to right, red, black);
+				margin: 0;
+				justify-content: center;
+				align-items: center;
+				display: flex;
+			}
+			#box {
+				background-color: white;
+				padding: 20px;
+				border-radius: 15px;
+				justify-content: center;
+				align-items: center;
+				font-family: arial;
+			}
+			h2 {
+				background: linear-gradient(to right, red, black);
+				text-fill-color: transparent;
+				-webkit-text-fill-color: transparent;
+				background-clip: text;
+			}
+			.palavras{
+				color: red;
+				font-weight: bold;
+			}
+			.palavras:hover{
+				color: black;
+				font-weight: bold;
+			}
+			input[type="text"], input[type="password"] {
+				width: 100%;
+				height: 20px;
+				margin-bottom: 10px;
+				margin-top: 5px;
+				border: 0;
+				border-bottom: 1px solid black;
+			}
+			input[type="text"]:hover, input[type="password"]:hover {
+				border-bottom: 1px solid red;
+			}
+			input[type="text"]:focus, input[type="password"]:focus {
+				color: red;
+			}
+			input[type="submit"]{
+				width: 100%;
+				background: linear-gradient(to right, red, black);
+				color: white;
+				font-size: 15px;
+				font-weight: bold;
+				height: 30px;
+				border: 0;
+				border-radius: 5px;
+				cursor: url('taco.png'), auto;
+			}
+			input[type="submit"]:hover {
+				background: linear-gradient(to left, red, black);
+			}
+			a:hover {
+				color: black;
+			}
+	</style>
+</head>
+<body>
+	<div class="menu">
+		<a href="index.html" class="amenu">Tung</a><a href="jogo.html" class="amenu">Jogo</a><a href="loja.html" class="amenu">Loja</a><a href="contato.html" class="atual">Entrar</a>
+	</div>
+	<div id="box">
+		<h2>Cadastro do Usuário</h2>
+		<form>
+			<label class="palavras">Login</label>
+			<input type="text" name="texto" id="texto"><br>
+			<label class="palavras">Senha</label>
+			<input type="password" name="senha" id="senha"><br>
+			<input type="submit" name="concluir" id="concluir"><br>
+			<label><small>Não é inscrito? <a href="cadastro.html">Inscreva-se aqui</a><small></label>
+
+		</form>
+	</div>
+
+</body>
+</html>

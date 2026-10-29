@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Tung | Jogo</title>
+  <link rel="icon" type="image/png" href="taco.png">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    table, tr, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      margin: 10px auto;
+      position: relative;
+      z-index: 3;
+    }
+
+    td {
+      width: 17px;
+      height: 17px;
+      background-color: #f0f0f0; /* Cor padrão (cinza claro) */
+      transition: background-color 0.2s ease;
+    }
+    p:hover{
+      color: white;
+      transition: 1s;
+      z-index: 4;
+    }
+    body{
+        background-image: url("tunguinho.png");
+        background-size: 100%;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: justify;
+        background-color: black;
+        text-align: center;
+        transition: 0.3s ease;
+        align-items: center;
+    }
+    .sahur {
+        animation-name: Tung;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        background-image: url("sahuur.jpg");
+        background-size: 100%;
+        border-radius: 100px;
+        width: 200px;
+        height: 200px;
+        position: relative;
+        z-index: 1;
+        animation-duration: 1.5s;
+    }
+    .original {
+        animation-name: original;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+        background-image: url("original.png");
+        background-size: 100%;
+        border-radius: 100px;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        z-index: 1;
+        animation-duration: 1.5s;
+    }
+    .botao{
+      background-color: white;
+      border-color: black;
+      border-radius: 100%;
+      width: 200px;
+      height: 200px;
+      background-image: url("baby.jpg");
+      position: relative;
+      left: 0;
+      bottom: 5px;
+      position: fixed;
+      z-index: 2;
+      }
+    body:has(.botao:hover){
+      background-image: url("tung.png");
+    }
+    .corC67430.ativo {
+      background-color: #C67430; /* Cor ao clicar (C67430) */
+      color: white;
+    }
+
+    .corDB9E4A{
+
+    }
+    .corDB9E4A.ativo {
+      background-color: #DB9E4A; /* Cor ao clicar (DB9E4A) */
+      color: white;
+    }
+
+    .corECC65F{
+
+    }
+    .corECC65F.ativo {
+      background-color: #ECC65F; /* Cor ao clicar (ECC65F) */
+      color: white;
+    }
+
+    .corFBF7CD{
+
+    }
+    .corFBF7CD.ativo {
+      background-color: #FBF7CD; /* Cor ao clicar (FBF7CD) */
+      color: black;
+    }
+
+    .cor92451D{
+
+    }
+    .cor92451D.ativo {
+      background-color: #92451D; /* Cor ao clicar (92451D) */
+      color: white;
+    }
+
+    .cor562A14{
+
+    }
+    .cor562A14.ativo {
+      background-color: #562A14; /* Cor ao clicar (562A14) */
+      color: white;
+    }
+
+    .corA8582D{
+
+    }
+    .corA8582D.ativo {
+      background-color: #A8582D; /* Cor ao clicar (A8582D) */
+      color: white;
+    }
+
+    .black{
+
+    }
+    .black.ativo {
+      background-color: black; /* Cor ao clicar (black) */
+      color: white;
+    }
+
+    .darkred{
+
+    }
+    .darkred.ativo {
+      background-color: darkred; /* Cor ao clicar (darkred) */
+      color: white;
+    }
+
+    .cor28150B{
+
+    }
+    .cor28150B.ativo {
+      background-color: #28150B; /* Cor ao clicar (28150B) */
+      color: white;
+    }
+    @keyframes Tung {
+      0% {
+          left: 0px;
+      }
+      100% {
+          left: 89%;
+      }
+    }
+    @keyframes original {
+      0% {
+        transform: rotate(0deg) ;
+      }
+      100% {
+        transform: rotate(360deg) scale(4.0);
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="cursor">
+  <div class="original"></div>
+  <div class="menu">
+  <a href="index.html" class="amenu">Tung</a><a href="jogo.html" class="atual">Jogo</a><a href="loja.html" class="amenu">Loja</a><a href="contato.html" class="amenu">Entrar</a>
+  </div>
+  <p class="primeiro">Clique nos quadradinhos e descubra a imagem que se formará!</p>
+  <table>
+      <tr>
+          <td class="darkred"></td>
+          <td class="darkred"></td>
+          <td class="darkred"></td>
+          <td class="darkred"></td>
+          <td class="darkred"></td>
+          <td class="black"></td>
+          <td class="black"></td>
+          <td class="black"></td>
+          <td class="black"></td>
+          <td class="black"></td>
+          <td class="black"></td>
+          <td class="black"></td>
+          <td class="black"></td>
+          <td class="darkred"></td>
+          <td class="darkred"></td>
+          <td class="darkred"></td>
+          <td class="darkred"></td>
+      </tr>
+      <tr>
+          <td class="darkred"></td>
+          <td class="darkred"></td>
+          <td class="darkred"></td>
+          <td class="darkred"></td>
+          <td class="black"></td>
+          <td class="corFBF7CD"></td>
+          <td class="corFBF7CD"></td>
+          <td class="corFBF7CD"></td>
+          <td class="corFBF7CD"></td>
+          <td class="corFBF7CD"></td>
+          <td class="corFBF7CD"></td>
+          <td class="corFBF7CD"></td>
+          <td class="corFBF7CD"></td>
+          <td class="black"></td>
+          <td class="black"></td>
+          <td class="darkred"></td>
+          <td class="darkred"></td>
+      </tr>
+      <tr>
+          <td class="darkred"></td>
+          <td class="darkred"></td>
+          <td class="darkred"></td>
+          <td class="black"></td>
+          <td class="corFBF7CD"></td>
+          <td class="corECC65F"></td>
+          <td class="corECC65F"></td>
+          <td class="corECC65F"></td>
+          <td class="corECC65F"></td>
+          <td class="corECC65F"></td>
+          <td class="corECC65F"></td>
+          <td class="corECC65F"></td>
+          <td class="corECC65F"></td>
+          <td class="corFBF7CD"></td>
+          <td class="corFBF7CD"></td>
+          <td class="black"></td>
+          <td class="darkred"></td>
+      </tr>
+      <tr>
+          <td class="darkred"></td>
+          <td class="darkred"></td>
+          <td class="black"></td>
+          <td class="corC67430"></td>
+          <td class="corECC65F"></td>
+          <td class="corECC65F"></td>
+          <td class="corECC65F"></td>
+          <td class="corECC65F"></td>
+          <td class="corECC65F"></td>
+          <td class="corECC65F"></td>
+          <td class="corECC65F"></td>
+          <td class="corECC65F"></td>
+          <td class="corECC65F"></td>
+          <td class="corDB9E4A"></td>
+          <td class="corC67430"></td>
+          <td class="corFBF7CD"></td>
+          <td class="black"></td>
+      </tr>
+      <tr>
+          <td class="darkred"></td>
+          <td class="darkred"></td>
+          <td class="black"></td>
+          <td class="corC67430"></td>
+          <td class="corECC65F"></td>
+          <td class="corECC65F"></td>
+          <td class="corECC65F"></td>
+          <td class="corECC65F"></td>
+          <td class="corECC65F"></td>
+          <td class="corECC65F"></td>
+          <td class="corECC65F"></td>
+          <td class="corECC65F"></td>
+          <td class="corECC65F"></td>
+          <td class="corDB9E4A"></td>
+          <td class="corC67430"></td>
+          <td class="corC67430"></td>
+          <td class="black"></td>
+      </tr>
+      <tr>
+          <td class="darkred"></td>
+          <td class="darkred"></td>
+          <td class="black"></td>
+          <td class="corC67430"></td>
+          <td class="corECC65F"></td>
+          <td class="corECC65F"></td>
+          <td class="corECC65F"></td>
+          <td class="corECC65F"></td>
+          <td class="corECC65F"></td>
+          <td class="corECC65F"></td>
+          <td class="corFBF7CD"></td>
+          <td class="corFBF7CD"></td>
+          <td class="corFBF7CD"></td>
+          <td class="corDB9E4A"></td>
+          <td class="corC67430"></td>
+          <td class="corC67430"></td>
+          <td class="black"></td>
+      </tr>
+      <tr>
+          <td class="darkred"></td>
+          <td class="darkred"></td>
+          <td class="black"></td>
+          <td class="corECC65F"></td>
+          <td class="corFBF7CD"></td>
+          <td class="corFBF7CD"></td>
+          <td class="corECC65F"></td>
+          <td class="corECC65F"></td>
+          <td class="corECC65F"></td>
+          <td class="cor92451D"></td>
+          <td class="cor92451D"></td>
+          <td class="cor92451D"></td>
+          <td class="cor92451D"></td>
+          <td class="corECC65F"></td>
+          <td class="corC67430"></td>
+          <td class="corC67430"></td>
+          <td class="black"></td>
+      </tr>
+      <tr>
+          <td class="darkred"></td>
+          <td class="black"></td>
+          <td class="corC67430"></td>
+          <td class="cor92451D"></td>
+          <td class="cor92451D"></td>
+          <td class="cor92451D"></td>
+          <td class="corECC65F"></td>
+          <td class="corECC65F"></td>
+          <td class="cor92451D"></td>
+          <td class="cor92451D"></td>
+          <td class="cor28150B"></td>
+          <td class="cor28150B"></td>
+          <td class="cor28150B"></td>
+          <td class="cor92451D"></td>
+          <td class="corC67430"></td>
+          <td class="corC67430"></td>
+          <td class="black"></td>
+      </tr>
+      <tr>
+          <td class="darkred"></td>
+          <td class="black"></td>
+          <td class="cor92451D"></td>
+          <td class="cor28150B"></td>
+          <td class="cor28150B"></td>
+          <td class="cor28150B"></td>
+          <td class="cor28150B"></td>
+          <td class="corDB9E4A"></td>
+          <td class="cor92451D"></td>
+          <td class="cor28150B"></td>
+          <td class="corFBF7CD"></td>
+          <td class="corFBF7CD"></td>
+          <td class="corFBF7CD"></td>
+          <td class="cor92451D"></td>
+          <td class="corC67430"></td>
+          <td class="corC67430"></td>
+          <td class="black"></td>
+      </tr>
+      <tr>
+          <td class="darkred"></td>
+          <td class="black"></td>
+          <td class="cor92451D"></td>
+          <td class="corFBF7CD"></td>
+          <td class="corFBF7CD"></td>
+          <td class="cor28150B"></td>
+          <td class="cor28150B"></td>
+          <td class="corDB9E4A"></td>
+          <td class="cor92451D"></td>
+          <td class="corFBF7CD"></td>
+          <td class="black"></td>
+          <td class="black"></td>
+          <td class="corECC65F"></td>
+          <td class="corFBF7CD"></td>
+          <td class="corC67430"></td>
+          <td class="corC67430"></td>
+          <td class="black"></td>
+      </tr>
+      <tr>
+          <td class="darkred"></td>
+          <td class="darkred"></td>
+          <td class="corFBF7CD"></td>
+          <td class="black"></td>
+          <td class="corECC65F"></td>
+          <td class="corFBF7CD"></td>
+          <td class="cor28150B"></td>
+          <td class="corFBF7CD"></td>
+          <td class="cor92451D"></td>
+          <td class="corFBF7CD"></td>
+          <td class="black"></td>
+          <td class="black"></td>
+          <td class="black"></td>
+          <td class="corFBF7CD"></td>
+          <td class="corC67430"></td>
+          <td class="corC67430"></td>
+          <td class="black"></td>
+      </tr>
+      <tr>
+          <td class="darkred"></td>
+          <td class="darkred"></td>
+          <td class="corFBF7CD"></td>
+          <td class="black"></td>
+          <td class="black"></td>
+          <td class="corFBF7CD"></td>
+          <td class="cor92451D"></td>
+          <td class="corFBF7CD"></td>
+          <td class="cor92451D"></td>
+          <td class="corDB9E4A"></td>
+          <td class="black"></td>
+          <td class="black"></td>
+          <td class="black"></td>
+          <td class="corDB9E4A"></td>
+          <td class="corECC65F"></td>
+          <td class="corC67430"></td>
+          <td class="black"></td>
+      </tr>
+      <tr>
+          <td class="darkred"></td>
+          <td class="black"></td>
+          <td class="corDB9E4A"></td>
+          <td class="black"></td>
+          <td class="black"></td>
+          <td class="corDB9E4A"></td>
+          <td class="cor92451D"></td>
+          <td class="corFBF7CD"></td>
+          <td class="corECC65F"></td>
+          <td class="corECC65F"></td>
+          <td class="corDB9E4A"></td>
+          <td class="corDB9E4A"></td>
+          <td class="corDB9E4A"></td>
+          <td class="corFBF7CD"></td>
+          <td class="corFBF7CD"></td>
+          <td class="corECC65F"></td>
+          <td class="black"></td>
+      </tr>
+      <tr>
+          <td class="black"></td>
+          <td class="corECC65F"></td>
+          <td class="corFBF7CD"></td>
+          <td class="corFBF7CD"></td>
+          <td class="corECC65F"></td>
+          <td class="corA8582D"></td>
+          <td class="corA8582D"></td>
+          <td class="corFBF7CD"></td>
+          <td class="corECC65F"></td>
+          <td class="corECC65F"></td>
+          <td class="corECC65F"></td>
+          <td class="corFBF7CD"></td>
+          <td class="corFBF7CD"></td>
+          <td class="corFBF7CD"></td>
+          <td class="corFBF7CD"></td>
+          <td class="corECC65F"></td>
+          <td class="black"></td>
+      </tr>
+      <tr>
+          <td class="black"></td>
+          <td class="corC67430"></td>
+          <td class="corFBF7CD"></td>
+          <td class="corFBF7CD"></td>
+          <td class="corECC65F"></td>
+          <td class="corA8582D"></td>
+          <td class="corFBF7CD"></td>
+          <td class="corFBF7CD"></td>
+          <td class="corA8582D"></td>
+          <td class="corA8582D"></td>
+          <td class="corECC65F"></td>
+          <td class="corFBF7CD"></td>
+          <td class="corFBF7CD"></td>
+          <td class="corFBF7CD"></td>
+          <td class="corECC65F"></td>
+          <td class="cor562A14"></td>
+          <td class="black"></td>
+      </tr>
+      <tr>
+          <td class="black"></td>
+          <td class="corC67430"></td>
+          <td class="cor562A14"></td>
+          <td class="corA8582D"></td>
+          <td class="corA8582D"></td>
+          <td class="cor562A14"></td>
+          <td class="corFBF7CD"></td>
+          <td class="corFBF7CD"></td>
+          <td class="corECC65F"></td>
+          <td class="corFBF7CD"></td>
+          <td class="corA8582D"></td>
+          <td class="corECC65F"></td>
+          <td class="corECC65F"></td>
+          <td class="corECC65F"></td>
+          <td class="cor562A14"></td>
+          <td class="cor562A14"></td>
+          <td class="black"></td>
+      </tr>
+      <tr>
+          <td class="darkred"></td>
+          <td class="black"></td>
+          <td class="corC67430"></td>
+          <td class="cor562A14"></td>
+          <td class="cor562A14"></td>
+          <td class="cor562A14"></td>
+          <td class="cor562A14"></td>
+          <td class="cor562A14"></td>
+          <td class="cor562A14"></td>
+          <td class="cor562A14"></td>
+          <td class="corDB9E4A"></td>
+          <td class="cor28150B"></td>
+          <td class="cor562A14"></td>
+          <td class="cor562A14"></td>
+          <td class="cor562A14"></td>
+          <td class="cor562A14"></td>
+          <td class="black"></td>
+      </tr>
+       <tr>
+          <td class="darkred"></td>
+          <td class="darkred"></td>
+          <td class="black"></td>
+          <td class="corC67430"></td>
+          <td class="cor28150B"></td>
+          <td class="corC67430"></td>
+          <td class="cor562A14"></td>
+          <td class="cor562A14"></td>
+          <td class="cor562A14"></td>
+          <td class="corDB9E4A"></td>
+          <td class="corDB9E4A"></td>
+          <td class="corDB9E4A"></td>
+          <td class="cor28150B"></td>
+          <td class="cor562A14"></td>
+          <td class="cor562A14"></td>
+          <td class="cor562A14"></td>
+          <td class="black"></td>
+      </tr>
+      <tr>
+          <td class="darkred"></td>
+          <td class="darkred"></td>
+          <td class="black"></td>
+          <td class="corC67430"></td>
+          <td class="cor562A14"></td>
+          <td class="cor28150B"></td>
+          <td class="cor92451D"></td>
+          <td class="cor92451D"></td>
+          <td class="corDB9E4A"></td>
+          <td class="corDB9E4A"></td>
+          <td class="cor28150B"></td>
+          <td class="cor28150B"></td>
+          <td class="cor28150B"></td>
+          <td class="cor562A14"></td>
+          <td class="cor562A14"></td>
+          <td class="cor562A14"></td>
+          <td class="black"></td>
+      </tr>
+      <tr>
+          <td class="darkred"></td>
+          <td class="darkred"></td>
+          <td class="darkred"></td>
+          <td class="black"></td>
+          <td class="corC67430"></td>
+          <td class="corA8582D"></td>
+          <td class="cor28150B"></td>
+          <td class="cor28150B"></td>
+          <td class="cor28150B"></td>
+          <td class="cor28150B"></td>
+          <td class="corDB9E4A"></td>
+          <td class="cor28150B"></td>
+          <td class="corC67430"></td>
+          <td class="cor562A14"></td>
+          <td class="cor562A14"></td>
+          <td class="corA8582D"></td>
+          <td class="black"></td>
+      </tr>
+      <tr>
+          <td class="darkred"></td>
+          <td class="darkred"></td>
+          <td class="darkred"></td>
+          <td class="black"></td>
+          <td class="corC67430"></td>
+          <td class="cor562A14"></td>
+          <td class="corA8582D"></td>
+          <td class="corA8582D"></td>
+          <td class="corDB9E4A"></td>
+          <td class="corDB9E4A"></td>
+          <td class="cor28150B"></td>
+          <td class="corC67430"></td>
+          <td class="corC67430"></td>
+          <td class="corA8582D"></td>
+          <td class="corA8582D"></td>
+          <td class="corA8582D"></td>
+          <td class="black"></td>
+      </tr>
+      <tr>
+          <td class="darkred"></td>
+          <td class="darkred"></td>
+          <td class="darkred"></td>
+          <td class="black"></td>
+          <td class="corC67430"></td>
+          <td class="corA8582D"></td>
+          <td class="cor28150B"></td>
+          <td class="cor28150B"></td>
+          <td class="cor28150B"></td>
+          <td class="cor28150B"></td>
+          <td class="corDB9E4A"></td>
+          <td class="corC67430"></td>
+          <td class="corA8582D"></td>
+          <td class="corA8582D"></td>
+          <td class="corA8582D"></td>
+          <td class="corA8582D"></td>
+          <td class="black"></td>
+      </tr>
+      <tr>
+          <td class="darkred"></td>
+          <td class="darkred"></td>
+          <td class="darkred"></td>
+          <td class="darkred"></td>
+          <td class="black"></td>
+          <td class="corC67430"></td>
+          <td class="corA8582D"></td>
+          <td class="corA8582D"></td>
+          <td class="corC67430"></td>
+          <td class="corDB9E4A"></td>
+          <td class="corDB9E4A"></td>
+          <td class="cor562A14"></td>
+          <td class="corA8582D"></td>
+          <td class="corA8582D"></td>
+          <td class="corA8582D"></td>
+          <td class="corA8582D"></td>
+          <td class="black"></td>
+      </tr>
+      <tr>
+          <td class="darkred"></td>
+          <td class="darkred"></td>
+          <td class="darkred"></td>
+          <td class="darkred"></td>
+          <td class="black"></td>
+          <td class="corC67430"></td>
+          <td class="cor562A14"></td>
+          <td class="cor562A14"></td>
+          <td class="cor562A14"></td>
+          <td class="cor562A14"></td>
+          <td class="cor562A14"></td>
+          <td class="corA8582D"></td>
+          <td class="corC67430"></td>
+          <td class="corECC65F"></td>
+          <td class="corECC65F"></td>
+          <td class="black"></td>
+          <td class="black"></td>
+      </tr>
+</table>
+</div>
+<div class="sahur"></div>
+<div class="botao"></div></div>
+  <script>
+    // Seleciona todas as células (td) da tabela
+    const celulas = document.querySelectorAll('td');
+
+    // Adiciona o evento de clique em cada uma delas
+    celulas.forEach(celula => {
+      celula.addEventListener('click', () => {
+        // Alterna a classe 'ativo' a cada clique
+        celula.classList.toggle('ativo');
+      });
+    });
+  </script>
+
+</body>
+</html>

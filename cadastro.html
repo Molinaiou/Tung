@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="taco.png">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Tung | Cadastro Usuários</title>
+</head>
+<style>
+	body{
+		height: 100vh;
+		color: white;
+		text-shadow: 1px 1px 4px lightslategray;
+
+		background: linear-gradient(to right, red, black);
+		align-items: center;
+		justify-content: center;
+		display: flex;
+	}
+
+	.botao{
+		background: linear-gradient(to right, red, black);
+		border: none;
+		border-radius: 25px;
+		color: white;
+		padding: 12px 30px;
+		font-size: 18px;
+		font-weight: bold;
+		box-shadow: 2px 2px 1px lightgray;
+		transition: 0.7s;
+	}
+	.botao:hover{
+		background: linear-gradient(to left, red, black);
+		cursor: pointer;
+
+	}
+	form{
+		color: white;
+		top: 4rem;
+		font-size: 25px;
+		background-color: white;
+		padding: 20px;
+		margin-top: 360px;
+		border-radius: 5px;
+		width: 500px;
+		box-shadow: 0 0 10px lightgray;
+		background-image: url("baby.jpg");
+		background-size: 100%;
+		background-repeat: no-repeat;
+		background-color: black;
+	}
+	label{
+		display: block;
+		margin: auto;
+		font-weight: bold;
+	}
+		input[type="text"],
+		input[type="email"],
+		input[type="date"],
+		input[type="date"],
+		textarea{
+			width: 100%;
+			padding: 8px;
+			margin-top: 5px;
+			box-sizing: border-box;
+			border: 1px solid black;
+			border-radius: 4px;
+		}
+		input[type="text"]:hover,
+		input[type="email"]:hover,
+		input[type="date"]:hover,
+		input[type="number"]:hover,
+		textarea:hover{
+			border-color: darkred;
+		}
+		textarea{
+			height: 100px;
+			resize: vertical;
+		}
+		input[type="radio"]{
+			margin-right: 5px;
+		}
+		input[type="range"]{
+			width: 90%;
+			margin-top: 5px;
+		}
+		fieldset {
+			border-radius: 14px;
+			padding: 5px;	
+			transition: 3s;
+
+		}
+		fieldset:hover {
+			background: linear-gradient(to right, red, black);
+		}
+
+</style>
+<body>
+<div class="menu">
+	<a href="index.html" class="amenu">Tung</a><a href="jogo.html" class="amenu">Jogo</a><a href="loja.html" class="amenu">Loja</a><a href="contato.html" class="atual">Contato</a>  
+</div>
+<form>
+		<br>
+		<fieldset>
+		<legend><small><i><b>Dados pessoais</b></i></small></legend>
+		<label for="Nome">Nome:</label>
+		<input type="text" name="Nome" id="Nome" size="40" maxlength="39" minlength="10" placeholder="Digite seu nome completo" required>
+
+		<br><br>
+
+		<label for="Idade">Idade:</label>
+		<input type="number" name="Idade" id="Idade" min="0" max="100" required>
+
+		<br><br>
+
+		<label for="Sexo">Sexo:</label>
+		F 	<input type="radio" name="Sexo" id="Sexo" value="F" checked>
+		M 	<input type="radio" name="Sexo" id="Sexo" value="F">
+		Outro	<input type="radio" name="Sexo" id="Sexo" value="F">
+
+		<br><br>
+
+		<label for="Foto">Foto:</label>
+		<input type="file" name="foto" id="foto" accept=".png, .jpg" required>
+
+		<br><br>
+
+		<label for="DataNascimento">Data de nascimento:</label>
+		<input type="date" name="DataNascimento" id="DataNascimento" required>
+
+		</fieldset>
+
+		<br>
+		
+		<fieldset>
+		<legend><small><i><b>Dados opicionais</b></i></small></legend>
+		<label for="capacitacao">Qual é a sua nota para o Tung?</label>
+		0<input type="range" min="0" max="10" id="capacitacao" name="capacitacao" value="0">10
+
+		<br><br>
+
+		
+
+		<label for="mensagem">O que você acha sobre o Tung Tung Tung Sahur?</label>
+		
+		<textarea id="mensagem" name="mensagem" cols="50" rows="5" placeholder="Digite sua opinião aqui"></textarea>
+				
+		<br>
+		
+		</fieldset>
+		<br>
+		<fieldset>
+		<legend><small><i><b>Dados para cadastro</b></i></small></legend>
+		<label for="Login">Login:</label>
+		<input type="text" name="login" id="login" size="10" minlength="8" maxlenght="10" required>
+
+		<br><br>
+
+		<label for="Senha">Senha:</label>
+		<input type="password" name="senha" id="senha" size="10" minlength="8" maxlength="10" required>
+
+		</fieldset>
+
+
+	<br>
+	<input type="reset" value="Limpar🗑️">
+	<input type="button" value="Clique aqui!" onclick="alert('Você clicou! 😍🪵')" class="botao">
+
+
+	</form>
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tung | Loja</title>
+	<link rel="icon" type="image/png" href="taco.png">
+  	<link rel="stylesheet" type="text/css" href="style.css">
+  	<style>
+  	body{
+      	background-image: url("tung.png");
+   		background-size: 100%;
+      	background-attachment: fixed;
+      	background-repeat: no-repeat;
+      	background-position: center;
+      	background-size: justify;
+      	background-color: black;
+      	text-align: center;
+      	transition: 0.3s ease;
+      	cursor: url('taco.png'), auto;
+      	display: flex;
+      	flex-direction: column;
+      	justify-content: center;
+      	align-items: center;
+  	}
+  	.produtos {
+  		transition: 1s ease, transform 1s ease;
+  		background: linear-gradient(to right, red, black);
+  		padding: 50px;
+  		border-color: white;
+  		border-style: dashed;
+  		border-radius: 30px;
+  		display: inline-flex;
+  		align-items: center;
+  		margin: 5px;
+  	}
+  	.produtos img {
+  		width: 300px;
+  		height: 300px;
+  		border-radius: 30px;
+  	}
+  	.produtos:hover{
+  		transition: 1s ease, transform 1s ease;
+  		transform: scale(1.2);
+  		display: inline;
+  	}
+	details {
+	  border: 4px dotted white;
+	  border-radius: 40px;
+	  padding: 15px;
+	  color: white;
+	  background: linear-gradient(to right, red, black);
+	}
+
+	summary {
+	  font-family: arial;
+	  font-size: 50px;
+	  font-weight: bold;
+	  margin: 2px;
+	  padding: 2px;
+	}
+
+	details[open] {
+	  padding: 0.5em;
+	}
+	a {
+		color: white;
+	}
+	a:hover{
+		color: red;
+	}
+	html {
+  		scroll-behavior: smooth;
+	}
+	ul {
+		width: 100%;
+		font-family: Helvetica, sans-serif;
+		font-style: bold;
+	}
+	li {
+		list-style: none;
+	}
+  	</style>
+</head>
+<body id="sumario">
+	<div class="menu">
+  <a href="index.html" class="amenu">Tung</a><a href="jogo.html" class="amenu">Jogo</a><a href="#sumario" class="atual">Loja</a><a href="contato.html" class="amenu">Entrar</a>
+  </div>
+  <div class="primeiro">
+  	<details><summary>Sumário</summary>
+  	<ul>
+  		<li><a href="#chinelo">Chinelo</a></li>
+  		<li><a href="#camiseta">Camiseta</a></li>
+  		<li><a href="#bone">Boné</a></li>
+  		<li><a href="#bone">Cueca</a></li>
+  		<li><a href="#escova">Escova de Dentes</a></li>
+  	</ul>
+  	</details>
+  </div>
+  <div class="produtos"><img src="sahur.jpg" id="chinelo"></div>
+  <div class="produtos"><img src="camiseta.png" id="camiseta"></div>
+  <div class="produtos"><img src="bone.png" id="bone"></div>
+  <div class="produtos"><img src="cueca.png" id="cueca"></div>
+  <div class="produtos"><img src="escova.png" id="escova"></div>
+</body>
+</html>
